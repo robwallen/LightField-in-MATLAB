@@ -42,7 +42,7 @@ classdef (ConstructOnLoad = true) lfm
             obj.set(PrincetonInstruments.LightField.AddIns.ExperimentSettings.FrameSettingsFramesToStore,value);
         end
         function [data, wavelength] = acquire(obj)
-            import System.IO.FileAccess;
+            import System.IO.FileAccess.*;
             obj.experiment.Acquire();
             accessed_wavelength = 0;
             
